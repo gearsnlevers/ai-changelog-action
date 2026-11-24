@@ -200,6 +200,7 @@ This repository now includes two workflows:
 ### Required secrets for release workflow
 
 - `LLM_API_KEY`: your LLM provider key (OpenAI, Anthropic, etc.).
+- `RELEASE_TOKEN`: a token of a repository administrator with contents write. The release job uses it to check out the repository, push the release commit and the tags, and create the GitHub release. The ruleset of `main` rejects pushes by `github-actions[bot]`, so it must list the repository administrator role as a bypass actor.
 
 ### Running a self-release
 

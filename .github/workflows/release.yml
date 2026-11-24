@@ -29,6 +29,11 @@ jobs:
         with:
           fetch-depth: 0
           fetch-tags: true
+          # The release commit goes to main, whose ruleset rejects pushes by
+          # github-actions[bot] (the Actions app cannot be a bypass actor). A
+          # token of a repository administrator is covered by the ruleset's
+          # bypass for the administrator role. frodo-cli's release job does the same.
+          token: ${{ secrets.RELEASE_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v5
