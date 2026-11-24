@@ -5,6 +5,7 @@ decision-makers:
   - maintainers
 applies-to:
   - .github/workflows/release.yml
+seal: sha256-g1:4aaeefe89ade876f954363fee6b9c1437b1c5b314695bde3cc3f43a4cf4926b1
 ---
 
 # Releases run through one dispatched workflow that uses the sibling actions

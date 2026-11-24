@@ -6,6 +6,7 @@ decision-makers:
 applies-to:
   - scripts/generate.js
   - README.md
+seal: sha256-g1:98355c1ee96e15facbc9465478567d9632ff9295a276026ff8c01fc0fec752a0
 ---
 
 # A full release consolidates the pre-release notes

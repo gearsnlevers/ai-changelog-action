@@ -7,6 +7,7 @@ applies-to:
   - action.yml
   - scripts/generate.js
   - README.md
+seal: sha256-g1:68b4d4b67e8d260d7b29873bbba43bc7cae9d5d073cb8e8a54d8ef9b001a7acd
 ---
 
 # The action writes the changelog and nothing else

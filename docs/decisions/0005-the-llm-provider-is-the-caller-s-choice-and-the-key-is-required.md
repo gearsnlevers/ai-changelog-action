@@ -6,6 +6,7 @@ decision-makers:
 applies-to:
   - action.yml
   - scripts/generate.js
+seal: sha256-g1:5a432fe77f64ba71db62fdea6574028480e16f1c280555869a86c199b3af0b88
 ---
 
 # The LLM provider is the caller's choice and the key is required
