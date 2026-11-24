@@ -1031,7 +1031,10 @@ function promoteUnreleased(content, { tag, date, failIfEmpty }) {
   }
 
   const replacement = `## Unreleased\n\n${heading}\n\n${notes}\n\n`;
-  const updatedContent = content.replace(unreleased.fullMatch, replacement).replace(/\n{3,}/g, '\n\n');
+  // A replacement function, not a string: a string reads "$" followed by a
+  // backtick, a quote, an ampersand or another "$" as a pattern, and the notes
+  // are text a model wrote, which may quote a dollar sign.
+  const updatedContent = content.replace(unreleased.fullMatch, () => replacement).replace(/\n{3,}/g, '\n\n');
 
   return {
     updatedContent,

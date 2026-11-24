@@ -448,6 +448,30 @@ test('promoteUnreleased inserts versioned heading and resets Unreleased', () => 
   assert.match(promoted.updatedContent, /## Unreleased\n\n## \[v1.0.1\] - 2026-08-01\n\n### Added\n- New command/);
 });
 
+test('promoteUnreleased inserts the notes literally, whatever dollar patterns they hold', () => {
+  const header = '# Changelog\n\nAll notable changes to this project are documented in this file.\n';
+  const older = '## [v1.0.0] - 2026-01-01\n\n- Initial release\n';
+  const changelog = (body) => `${header}\n## Unreleased\n\n${body}\n\n${older}`;
+
+  // Each of these is a special pattern in a replacement STRING: the text
+  // before the match, the text after it, the match itself, a single dollar.
+  for (const pattern of ['$`', "$'", '$&', '$$', '$1', '$<name>']) {
+    const body = `### Added\n- Completes the \`${pattern}\` REST facade (commit abc1234)`;
+    const promoted = promoteUnreleased(changelog(body), {
+      tag: 'v1.0.1',
+      date: '2026-08-01',
+      failIfEmpty: true,
+    });
+
+    assert.equal(promoted.notes, body, pattern);
+    assert.equal(
+      promoted.updatedContent,
+      `${header}\n## Unreleased\n\n## [v1.0.1] - 2026-08-01\n\n${body}\n\n${older}`,
+      `the notes with ${pattern} are inserted as written`
+    );
+  }
+});
+
 test('promoteUnreleased is rerun-safe when heading already exists', () => {
   const changelog = [
     '# Changelog',
