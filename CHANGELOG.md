@@ -6,6 +6,12 @@ The format is based on Keep a Changelog and this project follows Semantic Versio
 
 ## Unreleased
 
+## [v1.1.14] - 2026-11-24
+
+### Fixed
+- Corrected the release process to push the release commit using the release token, resolving issues with repository rule violations during the release process. This ensures that changes are made through a pull request as required by repository rules. (#75)
+- Fixed an issue where a dollar pattern in generated text incorrectly pasted the changelog header into bullet points, replacing the intended text. This ensures that the changelog content is correctly generated without repeating the header. (#73)
+
 ## [v1.1.13] - 2026-10-05
 
 ### Changed
@@ -169,5 +175,6 @@ The format is based on Keep a Changelog and this project follows Semantic Versio
 - Initial release of AI Changelog Updater.
 - Composite GitHub Action for LLM-driven `## Unreleased` changelog generation.
 
+[v1.1.14]: https://github.com/gearsnlevers/ai-changelog-action/compare/v1...v1.1.14
 [v1.1.13]: https://github.com/vscheuber/ai-changelog-action/compare/v1...v1.1.13
 [v1.1.12]: https://github.com/vscheuber/ai-changelog-action/compare/v1...v1.1.12
