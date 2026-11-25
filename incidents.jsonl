@@ -5,3 +5,5 @@
 {"at":"2026-11-24T20:05:28Z","event":"opened","key":"0005:P-06","violations":[{"commit":"4b1aab4f2a4dc87532f1a8b971481b5de64dd113","kind":"state","file":"0005-the-llm-provider-is-the-caller-s-choice-and-the-key-is-required.md","rule":"P-06","detail":"no seal"}]}
 {"at":"2026-11-24T20:05:28Z","event":"opened","key":"0006:P-06","violations":[{"commit":"4b1aab4f2a4dc87532f1a8b971481b5de64dd113","kind":"state","file":"0006-the-action-installs-its-own-production-dependencies-at-run-time.md","rule":"P-06","detail":"no seal"}]}
 {"at":"2026-11-24T20:05:28Z","event":"opened","key":"0007:P-06","violations":[{"commit":"4b1aab4f2a4dc87532f1a8b971481b5de64dd113","kind":"state","file":"0007-releases-run-through-one-dispatched-workflow-that-uses-the-sibling-actions.md","rule":"P-06","detail":"no seal"}]}
+{"at":"2026-11-25T01:59:24Z","event":"closed","key":"0006:P-06","violations":[]}
+{"at":"2026-11-25T01:59:24Z","event":"closed","key":"0007:P-06","violations":[]}
