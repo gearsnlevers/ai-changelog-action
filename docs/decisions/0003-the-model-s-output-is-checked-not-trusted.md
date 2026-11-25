@@ -5,6 +5,7 @@ decision-makers:
   - maintainers
 applies-to:
   - scripts/generate.js
+seal: sha256-g1:7c20f7ce5d328cab996a3fba71470a4812d3c718e1ca37bfd555f47da92a1b9c
 ---
 
 # The model's output is checked, not trusted

@@ -6,6 +6,7 @@ decision-makers:
 applies-to:
   - scripts/generate.js
   - README.md
+seal: sha256-g1:40908589b24237eb137fe71013278791e1f271d5edbb7100b8077a8df5ad4bec
 ---
 
 # Hand-written Unreleased notes survive

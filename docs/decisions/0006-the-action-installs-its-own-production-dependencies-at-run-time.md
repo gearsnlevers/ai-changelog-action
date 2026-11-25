@@ -7,6 +7,7 @@ applies-to:
   - action.yml
   - package.json
   - package-lock.json
+seal: sha256-g1:dd051a6f0504b72886eda0d07574a0e6747fa6ff48d79cbab0e9a9591be0a235
 ---
 
 # The action installs its own production dependencies at run time
