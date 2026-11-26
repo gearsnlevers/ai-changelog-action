@@ -1,0 +1,1 @@
+{"at":"2026-11-26T03:45:47Z","event":"announced","key":"10f2f37fe74a642ae5e7b4c045e832069388e1bc","acts":[{"kind":"pin","path":".github/record-keeper.yml"},{"kind":"code","path":".github/record-keeper/record-keeper.mjs"},{"kind":"code","path":".github/record-keeper/setup-check.mjs"},{"kind":"code","path":".github/record-keeper/updater.mjs"}],"told":[28791378]}
